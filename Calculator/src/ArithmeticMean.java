@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class ArithmeticMean {
     public static void main(String args[]) throws java.io.IOException {
-        double a =1;
-        double b=1;
+        double a =0;
+        double b=0;
         Scanner scanner = new Scanner(System.in);
         // блок выбора чисел
         System.out.println("First number:");
