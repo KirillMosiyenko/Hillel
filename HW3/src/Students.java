@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class Students {
     String name;
     int numberOfLessons;
-    int [] marks = new int [numberOfLessons];
+    int [] marks = new int [0];
     boolean [] visit;
     String group;
 

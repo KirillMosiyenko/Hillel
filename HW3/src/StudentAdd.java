@@ -8,7 +8,7 @@ public class StudentAdd {
         int chooseNumber;
         while(true){
             System.out.println("Please press number of what do you want: 1. add new group; 2. add new student; 3. Print list students of group;" +
-                    "\n 4. Put marks;");
+                    "\n 4. Put marks; 5. Print marks of student; 6. Delete student.");
             chooseNumber = intInput();
             switch(chooseNumber){
                 case 1:
@@ -43,10 +43,44 @@ public class StudentAdd {
                     aboutGroup(group);
                     break;
                 case 4:
-
+                    numberG=0;
+                    aboutGroup(group);
+                    System.out.println("Please enter the name of group");
+                    tempNameGroup = stringInput();
+                    for(int i=0; i<= group.length; i++){
+                        if(group[i].nameOfGroup.equals(tempNameGroup)){
+                            numberG=i;
+                            break;
+                        }
+                    }
+                    group[numberG].putMarks(group[numberG].list);
+                    break;
+                case 5:
+                    numberG=0;
+                    aboutGroup(group);
+                    System.out.println("Please enter the name of group");
+                    tempNameGroup = stringInput();
+                    for(int i=0; i<= group.length; i++){
+                        if(group[i].nameOfGroup.equals(tempNameGroup)){
+                            numberG=i;
+                            break;
+                        }
+                    }
+                    group[numberG].aboutMarksStudent(group[numberG].list);
+                    break;
+                case 6:
+                    numberG=0;
+                    aboutGroup(group);
+                    System.out.println("Please enter the name of group");
+                    tempNameGroup = stringInput();
+                    for(Group i : group){
+                        if(i.nameOfGroup.equals(tempNameGroup)){
+                            group[numberG].list=group[numberG].deleteStudent(group[numberG].list);
+                        }
+                        numberG++;
+                    }
+                    break;
             }
-
-            //System.out.println(group[2].nameOfGroup);
         }
     }
 
@@ -79,7 +113,6 @@ public class StudentAdd {
             for (Students j:i.list) {
                 System.out.println("  "+j.name);
             }
-
         }
     }
 }
