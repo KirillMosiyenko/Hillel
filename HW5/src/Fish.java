@@ -3,5 +3,8 @@ public class Fish extends Animals {
         super(id, age, weight, colour);
     }
 
-
+    public String checkVaccinated(){
+        String check = "s";
+        return check;
+    }
 }

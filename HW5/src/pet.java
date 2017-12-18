@@ -1,13 +1,13 @@
 public abstract class pet extends Animals{
     private String name;
-    private boolean isVaccinated;
-    boolean trained;
+    boolean isVaccinated;
+//    boolean isTrained;
 
-    public pet(int id, int age, int weight, String colour, String name, boolean isVaccinated, boolean trained) {
+    public pet(int id, int age, int weight, String colour, String name, boolean vaccinated, boolean trained) {
         super(id, age, weight, colour);
         this.name = name;
-        this.isVaccinated = isVaccinated;
-        this.trained = trained;
+        this.isVaccinated = vaccinated;
+//        this.isTrained = trained;
     }
 
     public String getName() {
@@ -29,6 +29,13 @@ public abstract class pet extends Animals{
     @Override
     public String voice() {
         return(super.voice()+" My name is " + this.name);
+    }
+    public String checkVaccinated(){
+        String check = "I have ";
+        if(this.isVaccinated){
+            check = check+" all vaccine";
+        }else {check = check + " not vaccine";}
+        return check;
     }
 
 }

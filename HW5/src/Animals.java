@@ -18,6 +18,7 @@ public abstract class Animals {
     public void setId(int id) {
         this.id = id;
     }
+    public   abstract String checkVaccinated();
 
     public String voice(){
         return ("Hello ");
@@ -46,4 +47,5 @@ public abstract class Animals {
     public void setColour(String colour) {
         this.colour = colour;
     }
+
 }
